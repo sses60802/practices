@@ -1,0 +1,16 @@
+public class PaperFolder {
+  public static Long fold(Double distance) {
+    if (distance < 0) return null;
+    
+    double i = 0.0001;
+    if(distance < i && distance >0)
+    return 0L;
+    
+    int j = 0;
+    while(i < distance){
+    i = i*2;
+    j++;
+    }
+    return Long.valueOf(j);
+  }
+}
