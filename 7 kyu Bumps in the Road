@@ -1,0 +1,14 @@
+import java.util.regex.*;
+public class BumpsTheRoad {
+  public static String bumps(final String road) {
+    int countN = 0;
+    String findText = "n";
+    Pattern p = Pattern.compile(findText);
+    Matcher m = p.matcher(road);
+    while (m.find()) {
+        countN++;
+    }
+
+    return countN <= 15? "Woohoo!": "Car Dead";
+  }
+}
