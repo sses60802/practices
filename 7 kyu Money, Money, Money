@@ -1,0 +1,14 @@
+import java.text.*;
+public class Money {
+  public static int calculateYears(double principal,double interest,double tax,double desired) {
+    // your code
+   int j = 0;
+   if(principal == desired)
+    return 0;
+   do{
+      principal = principal * ((1-tax)*interest+1) ;
+      j++;  
+   }while(principal < desired);
+   return j;
+  }
+}
