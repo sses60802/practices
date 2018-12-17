@@ -1,0 +1,24 @@
+public class BrokenSequence {
+		public int findMissingNumber(String sequence) {	
+      if(sequence.isEmpty())
+        return 0;
+      String[] s = sequence.split(" ");
+      /*for (int i = 0; i <s.length+1 ; i++) {//test1 matches char
+            try{
+                Integer.parseInt(s[i]);
+            }
+            catch (NumberFormatException e){
+                return 1;
+            }
+        }*/
+      for(int i = 1; i < s.length + 1; i++){
+        String s1 = i +"";
+        if(s[i-1].matches("[a-z]+"))
+          return 1;
+        if(sequence.indexOf(s1) == -1)
+          return i;
+      }
+      return 0;
+    }
+    
+}
