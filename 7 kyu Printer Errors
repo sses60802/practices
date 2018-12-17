@@ -1,0 +1,17 @@
+public class Printer {
+    
+    public static String printerError(String s) {
+        // your code
+        int slen = s.length();
+        char[] sk = {'n','o','p','q','r','s','t','u','v','w','x','y','z'};
+        StringBuffer sb = new StringBuffer();
+        int count = 0;
+        for(int i = 0; i < s.length(); i++){
+          for(int j = 0; j< sk.length;j++){
+            if(s.charAt(i) == sk[j])
+              count++;
+          }
+        }
+        return sb.append(count).append("/").append(slen).toString();
+    }
+}
