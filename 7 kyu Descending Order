@@ -1,0 +1,20 @@
+import java.util.*;
+public class DescendingOrder {
+  public static int sortDesc(final int num) {
+    if(num <0)
+      return 0;
+    String[] s = Integer.toString(num).split("");
+    Arrays.sort(s);
+    String s1 = Arrays.toString(s);
+    String reverse = "";
+    for(int i = s1.length()-1; i >= 0 ; i--)
+      reverse += s1.charAt(i);
+    reverse = reverse.replaceAll("[\\pP\\p{Punct}]","");
+    reverse = reverse.replace(" ","");
+    int output = Integer.parseInt(reverse);
+    return output;
+    
+
+    //Your code
+  }
+}
