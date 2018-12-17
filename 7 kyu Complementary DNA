@@ -1,0 +1,18 @@
+public class DnaStrand {
+  public static String makeComplement(String dna) {
+    //Your code
+     String and = "";
+     for(int i = 0; i<dna.length();i++){
+        char a = dna.charAt(i);
+        if(a == 'A')
+          and += 'T';
+        else if(a == 'T')
+          and += 'A';
+        else if(a == 'C')
+          and += 'G';
+        else if(a == 'G')
+          and += 'C';
+      }
+     return and;
+  }
+}
