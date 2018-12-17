@@ -1,0 +1,18 @@
+import java.util.HashMap;
+public class Solution
+{
+    public static int[] twoSum(int[] numbers, int target)
+    {
+       int[] ret = new int[2];
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        for (int i = 0; i < numbers.length; i++) {
+            if (hashMap.containsKey(target - numbers[i])) {
+                ret[0] = hashMap.get(target - numbers[i]);
+                ret[1] = i;
+                break;
+            }
+            hashMap.put(numbers[i], i);
+        }
+        return ret;
+    }
+}
