@@ -1,0 +1,25 @@
+public class Kata
+{
+  public static int sum(int[] numbers)
+  { 
+    /*int[] nu = null;
+    if (numbers.length == 0 || numbers.length == 1 || numbers.equals(nu))
+    return 0;*/
+    if (numbers == null)
+      return 0;
+    else if (numbers.length < 2)
+      return 0;
+    int maxIndex = numbers[0];
+    int minIndex = numbers[0];
+    int x = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if(maxIndex < numbers[i])
+                maxIndex = numbers[i];
+            if(minIndex > numbers[i])
+                minIndex = numbers[i];
+        }
+        for (int j = 0; j < numbers.length; j++) x += numbers[j];
+        x = x - minIndex - maxIndex;
+    return x;
+  }
+}
