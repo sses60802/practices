@@ -1,0 +1,22 @@
+import java.util.Arrays;
+public class JadenCase {
+
+	public String toJadenCase(String phrase) {
+
+    if(phrase == null || phrase == "//s" || phrase == "" || phrase.length()<=0)
+      return null;
+    if(phrase.length()>0){
+    String[] arr = phrase.split(" ");
+    String outString = "";
+    for(String s : arr){
+      outString += capitalize(s) + " ";
+    }
+    return outString.substring(0, outString.length() - 1);
+    } 
+    return null;
+  }
+  public static String capitalize(String str) {
+    return Character.toUpperCase(str.charAt(0)) + str.substring(1);
+  }
+   
+}
